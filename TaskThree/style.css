@@ -1,0 +1,96 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.status {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styling for the game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cell:hover {
+    background-color: #d9d9d9;
+    transform: scale(0.95);
+}
+
+.cell.x {
+    color: #e74c3c;
+}
+
+.cell.o {
+    color: #3498db;
+}
+
+
+button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+}
